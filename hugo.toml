@@ -12,13 +12,13 @@ theme = 'stack'
     [params.sidebar]
         emoji    = "🌊"
         subtitle = "歲歲安瀾，心之所向。"
-        avatar   = "img/avatar.jpg"
+        avatar   = "/img/avatar.jpg"
 
     # 這裡控制作者資訊
     [params.author]
-        name = "m7chu"
+        name     = "m7chu"
         headline = "歲歲安瀾，心之所向。"
-        avatar = "img/avatar.jpg"
+        avatar   = "/img/avatar.jpg"
 
     # 這裡控制側邊欄要顯示哪些小工具
     [params.widgets]
