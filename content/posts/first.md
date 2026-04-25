@@ -1,6 +1,9 @@
 ---
+image: "img/avatar.jpg"
 title: "建站愉"
 date: 2026-04-25T17:06:25+08:00
+categories: ["為什麼有這個站？"]
+tags: ["戰勝Hugo", "終於"]
 draft: false
 ---
 
