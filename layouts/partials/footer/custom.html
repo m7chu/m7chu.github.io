@@ -1,0 +1,34 @@
+<!-- 運行時間 + 自動字數統計 -->
+<p id="site-runtime" style="font-size: 0.75rem; text-align: center; margin: 4px 0; opacity: 0.8;">
+  Loading...
+</p>
+
+<!-- 版權 -->
+<p style="font-size: 0.75rem; text-align: center; margin: 2px 0; opacity: 0.8;">
+  © m7chu All rights reserved.
+</p>
+
+<script>
+(function() {
+  // 建站日期
+  const start = new Date("2026-04-25T06:25:43");
+
+  // Hugo 自動加總所有文章字數
+  const totalChars = {{ range .Site.RegularPages }}{{ .WordCount }}+{{ end }}0;
+  const totalK = (totalChars / 1000).toFixed(1);
+
+  function update() {
+    const diff = Date.now() - start.getTime();
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000) / 60000);
+    const el = document.getElementById("site-runtime");
+    if (el) {
+      el.textContent =
+        `This blog has been existing for ${days} days, ${hours} hours, ${mins} mins, with a total of ${totalK}k words.`;
+    }
+  }
+  update();
+  setInterval(update, 60000);
+})();
+</script>

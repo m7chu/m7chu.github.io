@@ -1,53 +1,67 @@
 baseURL = 'https://m7chu.github.io/'
-languageCode = 'zh-tw'
-title = '歲歲安瀾'
-theme = 'stack'
+title   = '歲歲安瀾'
+theme   = 'stack'
+
+# 單語言模式（不顯示語言切換按鈕）
+languageCode = "zh-tw"
 
 [params]
-    mainSections = ["posts"]
+    mainSections       = ["posts"]   # 對應 content/posts/ 資料夾
     featuredImageField = "image"
-    rssFullContent = true
+    rssFullContent     = true
+    defaultTheme       = "light"     # 預設淺色；改 "dark" 可預設深色
 
-    # 這裡控制側邊欄的整體呈現
-    [params.sidebar]
-        emoji    = "🌊"
-        subtitle = "歲歲安瀾，心之所向。"
-        avatar   = "/img/avatar.jpg"
-
-    # 這裡控制作者資訊
     [params.author]
         name     = "m7chu"
-        headline = "歲歲安瀾，心之所向。"
-        avatar   = "/img/avatar.jpg"
+        headline = "昭昭如願。"
 
-    # 這裡控制側邊欄要顯示哪些小工具
+    [params.sidebar]
+    subtitle = "昭昭如願。"
+    avatar   = "img/m7chu.jpg"   # 字串格式，不能改成巢狀
+    
     [params.widgets]
         sidebar = ["search", "archives", "categories", "tag-cloud"]
 
-    # 文章設定
     [params.article]
+        readingTime = false          # 關閉閱讀時間顯示
         [params.article.license]
             enabled = true
             default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
-    # 頁腳設定
     [params.footer]
         since = 2026
 
-# 選單設定（這部分維持在最外層沒問題）
+# ── 左側邊欄選單（由上到下共四項）────────────────────
+
+# 第一項：首頁
 [[menu.main]]
     identifier = "home"
-    name       = "首頁"
+    name       = "Home"
     url        = "/"
-    weight     = 1
+    weight     = 1  # weight 數字越小越靠上
 
+# 第二項：關於頁面（需建立 content/about/_index.md）
 [[menu.main]]
-    identifier = "archives"
-    name       = "歸檔"
-    url        = "/archives/"
+    identifier = "about"
+    name       = "About"
+    url        = "/about/"
     weight     = 2
 
-# 社交連結
+# 第三項：文章歸檔（需建立 content/archives/_index.md）
+[[menu.main]]
+    identifier = "archives"
+    name       = "Archive"
+    url        = "/archives/"
+    weight     = 3
+
+# 第四項：創作頁面（需建立 content/work/_index.md）
+[[menu.main]]
+    identifier = "work"
+    name       = "Work"
+    url        = "/work/"
+    weight     = 4
+
+# ── 社交連結 ──────────────────────────────────────────
 [[params.social]]
     identifier = "github"
     name       = "GitHub"
