@@ -7,57 +7,50 @@ theme = 'stack'
     mainSections = ["post"]
     featuredImageField = "image"
     rssFullContent = true
-    favicon = "img/avatar.png"
 
-[footer]
-    since = 2020
+    # 這裡控制側邊欄的整體呈現
+    [params.sidebar]
+        emoji    = "🌊"
+        subtitle = "歲歲安瀾，心之所向。"
+        avatar   = "img/avatar.jpg"
 
-[sidebar]
-    emoji    = "✏️"
-    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    avatar   = "img/avatar.png"
+    # 這裡控制作者資訊
+    [params.author]
+        name = "m7chu"
+        headline = "歲歲安瀾，心之所向。"
+        avatar = "img/avatar.jpg"
 
-[article]
-    [article.license]
-        enabled = true
-        default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+    # 這裡控制側邊欄要顯示哪些小工具
+    [params.widgets]
+        sidebar = ["search", "archives", "categories", "tag-cloud"]
 
-[widgets]
-    homepage = [
-        { type = "search" },
-        { type = "archives", params = { limit = 5 } },
-        { type = "categories", params = { limit = 10 } },
-        { type = "tag-cloud", params = { limit = 10 } },
-    ]
-    page     = [{ type = "toc" }]
+    # 文章設定
+    [params.article]
+        [params.article.license]
+            enabled = true
+            default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
-[comments]
-    # See complete configuration in config/_default/params.toml
-    enabled  = true
-    provider = "disqus"
+    # 頁腳設定
+    [params.footer]
+        since = 2026
 
-# GDPR Cookie Consent Configuration
-# When enabled, analytics and functional cookies require user consent
-[cookies]
-    enabled = false
-
-    [cookies.categories]
-        analytics  = true
-        functional = true
+# 選單設定（這部分維持在最外層沒問題）
+[[menu.main]]
+    identifier = "home"
+    name       = "首頁"
+    url        = "/"
+    weight     = 1
 
 [[menu.main]]
-[[social]]
+    identifier = "archives"
+    name       = "歸檔"
+    url        = "/archives/"
+    weight     = 2
+
+# 社交連結
+[[params.social]]
     identifier = "github"
     name       = "GitHub"
-    url        = "https://github.com/CaiJimmy/hugo-theme-stack"
-
-    [social.params]
+    url        = "https://github.com/m7chu"
+    [params.social.params]
         icon = "brand-github"
-
-[[social]]
-    identifier = "twitter"
-    name       = "Twitter"
-    url        = "https://twitter.com"
-
-    [social.params]
-        icon = "brand-twitter"
