@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 歲歲安瀾</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>Recent content in Posts on 歲歲安瀾</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <lastBuildDate>Sat, 25 Apr 2026 06:01:32 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>My First Blog</title>
+            <link>http://localhost:1313/posts/my-first-blog/</link>
+            <pubDate>Sat, 25 Apr 2026 06:01:32 +0800</pubDate>
+            <guid>http://localhost:1313/posts/my-first-blog/</guid>
+            <description></description>
+        </item><item>
+            <title>歲歲安瀾</title>
+            <link>http://localhost:1313/posts/first/</link>
+            <pubDate>Sat, 25 Apr 2026 05:53:09 +0800</pubDate>
+            <guid>http://localhost:1313/posts/first/</guid>
+            <description>&lt;h2 id=&#34;歡迎來到我的實驗室&#34;&gt;歡迎來到我的實驗室&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;這是我第一次嘗試用 &lt;strong&gt;Hugo&lt;/strong&gt; 寫作。&lt;/p&gt;&#xA;&lt;p&gt;看到這段文字，代表我已經成功擊敗了那些複雜的指令！&lt;/p&gt;&#xA;</description>
+        </item></channel>
+</rss>
