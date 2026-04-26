@@ -1,48 +1,36 @@
 <style>
-/* ── 頭像：強制正確比例，跨瀏覽器穩定 ── */
-.site-avatar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8px;
+/* =============================================
+   Light Mode（亮色模式）
+   ============================================= */
+[data-scheme="light"] {
+    --body-background: #EDECE9;   /* 亮色背景 */
+    --card-background: #CFCDC4;   /* 貼文框 */
+    --base-color: #4E5036;        /* 主文字色 */
 }
 
-.site-avatar img {
-    width: 128px !important;
-    height: 128px !important;
-    min-width: 128px !important;
-    min-height: 128px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    display: block !important;
-    flex-shrink: 0 !important;   /* 防止 flex 容器壓縮圖片 */
+/* =============================================
+   Dark Mode（深色模式）
+   ============================================= */
+[data-scheme="dark"] {
+    --body-background: #4E5036;        /* 深色背景 */
+    --card-background: #7A746A;        /* 貼文框 */
+    --base-color: #CFCDC4;             /* 主文字色 */
 }
 
-/* ── Light Mode 背景 ── */
-[data-scheme="light"] body { background-color: #F5F5FA; }
-[data-scheme="light"] .left-sidebar { background-color: #F5F5FA; }
-
-/* ── Dark Mode 背景（粉色）── */
-[data-scheme="dark"] body,
-[data-scheme="dark"] .left-sidebar,
-[data-scheme="dark"] .main-container {
-    background-color: #FFC0CB !important;
+/* 直接蓋掉 body 背景確保生效 */
+body {
+    background-color: var(--body-background) !important;
 }
 
-/* ── 側邊欄 hover 效果 ── */
-.sidebar-menu li a {
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-block;
+/* 直接蓋掉貼文框背景 */
+.article-list--tile .article-list--tile-item,
+.card {
+    background-color: var(--card-background) !important;
 }
-.sidebar-menu li a:hover {
-    color: #111111;
-    transform: translateX(4px);
-}
-[data-scheme="dark"] .sidebar-menu li a:hover { color: #ffffff; }
 
-/* ── 隱藏閱讀時間 ── */
+/* 隱藏閱讀時間 */
 .article-time--reading { display: none; }
 
-/* ── 隱藏創用CC授權 ── */
+/* 隱藏創用CC授權 */
 .article-license { display: none; }
 </style>

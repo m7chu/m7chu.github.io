@@ -3,8 +3,8 @@ date: 2026-04-25T17:06:25+08:00
 title: "為什麼有這個站？"
 categories: ["網路日誌"]
 tags: ["Blog" ]
-post: posts 
 draft: false
+slug: "firstpost"
 ---
 
 能看到這段話證明有個資訊小白終於成功撬開世界的一角。

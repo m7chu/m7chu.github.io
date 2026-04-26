@@ -20,45 +20,29 @@
 <meta name="twitter:title" content="Blog">
 <meta name="twitter:description" content="昭昭如願。"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/tags/blog/index.xml"><style>
  
-.site-avatar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8px;
-}
-
-.site-avatar img {
-    width: 128px !important;
-    height: 128px !important;
-    min-width: 128px !important;
-    min-height: 128px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    display: block !important;
-    flex-shrink: 0 !important;    
+[data-scheme="light"] {
+    --body-background: #EDECE9;    
+    --card-background: #CFCDC4;    
+    --base-color: #4E5036;         
 }
 
  
-[data-scheme="light"] body { background-color: #F5F5FA; }
-[data-scheme="light"] .left-sidebar { background-color: #F5F5FA; }
-
- 
-[data-scheme="dark"] body,
-[data-scheme="dark"] .left-sidebar,
-[data-scheme="dark"] .main-container {
-    background-color: #FFC0CB !important;
+[data-scheme="dark"] {
+    --body-background: #4E5036;         
+    --card-background: #7A746A;         
+    --base-color: #CFCDC4;              
 }
 
  
-.sidebar-menu li a {
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-block;
+body {
+    background-color: var(--body-background) !important;
 }
-.sidebar-menu li a:hover {
-    color: #111111;
-    transform: translateX(4px);
+
+ 
+.article-list--tile .article-list--tile-item,
+.card {
+    background-color: var(--card-background) !important;
 }
-[data-scheme="dark"] .sidebar-menu li a:hover { color: #ffffff; }
 
  
 .article-time--reading { display: none; }
@@ -98,61 +82,67 @@
     </button>
 
     <header>
-        <figure class="site-avatar">
+        
+        
+            <figure class="site-avatar">
                 <a href="/">
-                    <img src="" 
-                        width=""
-                        height=""
+                    
+                    <img src="/img/m7chu.jpg"
                         class="site-logo"
                         loading="lazy"
-                        alt="Avatar">
+                        alt="Avatar"
+                        style="width:120px; height:120px; border-radius:50%; object-fit:cover; object-position:top;">
                 </a>
-                
             </figure>
         
+
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">歲歲安瀾</a></h1>
             <h2 class="site-description">昭昭如願。</h2>
         </div>
-    </header><ol class="menu" id="main-menu">
+    </header>
+
+    
+    <ol class="menu" id="main-menu">
         
         
+            
+            <li >
+                <a href='/' >
+                    
+                    <span>Home</span>
+                </a>
+            </li>
         
-        <li >
-            <a href='/' >
-                
-                <span>Home</span>
-            </a>
-        </li>
+            
+            <li >
+                <a href='/about/' >
+                    
+                    <span>About</span>
+                </a>
+            </li>
         
+            
+            <li >
+                <a href='/archives/' >
+                    
+                    <span>Archive</span>
+                </a>
+            </li>
         
-        <li >
-            <a href='/about/' >
-                
-                <span>About</span>
-            </a>
-        </li>
+            
+            <li >
+                <a href='/work/' >
+                    
+                    <span>Work</span>
+                </a>
+            </li>
         
-        
-        <li >
-            <a href='/archives/' >
-                
-                <span>Archive</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/work/' >
-                
-                <span>Work</span>
-            </a>
-        </li>
+
         
         <li class="menu-bottom-section">
             <ol class="menu">
-
                 
                     <li id="dark-mode-toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -178,7 +168,6 @@
         </li>
     </ol>
 </aside>
-
     
 
             <main class="main full-width">
@@ -201,23 +190,32 @@
     
         <section class="article-list--compact">
             
-                <h2 class="article-title">為什麼有這個站？</h2>
-
-
+                <article>
+    <a href="/posts/firstpost/">
+        <div class="article-details">
+            <h2 class="article-title">為什麼有這個站？</h2>
+                <footer class="article-meta"><time datetime="2026-04-25T17:06:25&#43;08:00">Saturday, April 25, 2026</time>
+                </footer></div>
+    </a>
+</article>
             
         </section>
     <footer class="site-footer">
     <section class="copyright">
+
         
-        &copy; 2026 歲歲安瀾 All rights reserved.<br>
+        &copy; 2026 歲歲安瀾 All rights reserved.
 
         <br>
 
         
-        <span style="font-size: 0.78rem; font-weight: 400; opacity: 0.75;">
+        <span style="font-size:1.2rem; font-weight:405; line-height:0.1;">
+            
             <span id="site-runtime">Loading...</span><br>
+            
             Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a><br>
-            Theme <span style="font-weight: 400;">Stack</span> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+            
+            Theme Stack designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
         </span>
 
     </section>
@@ -225,22 +223,19 @@
 
 <script>
 (function() {
+     
     const start = new Date("2026-04-25T06:25:43");
-
-    
-    const totalChars =  3 +0;
-    const totalK = (totalChars / 1000).toFixed(1);
+     
+    const totalK = "3.0";   
 
     function update() {
-        const diff = Date.now() - start.getTime();
+        const diff  = Date.now() - start.getTime();
         const days  = Math.floor(diff / 86400000);
         const hours = Math.floor((diff % 86400000) / 3600000);
         const mins  = Math.floor((diff % 3600000) / 60000);
         const el = document.getElementById("site-runtime");
-        if (el) {
-            el.textContent =
-                `This blog has been existing for ${days} days, ${hours} hours, ${mins} mins, with a total of ${totalK}k words.`;
-        }
+        if (el) el.textContent =
+            `This blog has been existing for ${days} days, ${hours} hours, ${mins} mins, with a total of ${totalK}k words.`;
     }
     update();
     setInterval(update, 60000);
@@ -252,39 +247,6 @@
         
 <script type="text/javascript" src="/ts/main.aa3b09267792f183ce5fdd6a2a716dfd808aea0c62621cc7c601ac35d3017c84.js" defer></script>
 
-<p id="site-runtime" style="font-size: 0.75rem; text-align: center; margin: 4px 0; opacity: 0.8;">
-  Loading...
-</p>
-
-
-<p style="font-size: 0.75rem; text-align: center; margin: 2px 0; opacity: 0.8;">
-  © m7chu All rights reserved.
-</p>
-
-<script>
-(function() {
-  
-  const start = new Date("2026-04-25T06:25:43");
-
-  
-  const totalChars =  3 +0;
-  const totalK = (totalChars / 1000).toFixed(1);
-
-  function update() {
-    const diff = Date.now() - start.getTime();
-    const days  = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins  = Math.floor((diff % 3600000) / 60000);
-    const el = document.getElementById("site-runtime");
-    if (el) {
-      el.textContent =
-        `This blog has been existing for ${days} days, ${hours} hours, ${mins} mins, with a total of ${totalK}k words.`;
-    }
-  }
-  update();
-  setInterval(update, 60000);
-})();
-</script>
 
     </body>
 </html>

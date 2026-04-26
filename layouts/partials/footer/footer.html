@@ -1,15 +1,19 @@
 <footer class="site-footer">
     <section class="copyright">
-        <!-- 第一行：© 年份 站名 All rights reserved. -->
-        &copy; {{ now.Year }} {{ .Site.Title }} All rights reserved.<br>
+
+        <!-- 第一行：版權，粗體原樣式 -->
+        &copy; {{ now.Year }} {{ .Site.Title }} All rights reserved.
 
         <br>
 
-        <!-- 第二、三、四行：細字小字 -->
-        <span style="font-size: 0.875rem; font-weight: 400; opacity: 0.75;">
+        <!-- 第二～四行：細字小字 -->
+        <span style="font-size:1.2rem; font-weight:405; line-height:0.1;">
+            <!-- 第二行：運行時間與字數，由下方 JS 填入 -->
             <span id="site-runtime">Loading...</span><br>
+            <!-- 第三行 -->
             Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a><br>
-            Theme <span style="font-weight: 400;">Stack</span> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+            <!-- 第四行 -->
+            Theme Stack designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
         </span>
 
     </section>
@@ -17,22 +21,19 @@
 
 <script>
 (function() {
+    /* 建站日期 */
     const start = new Date("2026-04-25T06:25:43");
-
-    // Hugo 自動加總所有文章字數
-    const totalChars = {{ range .Site.RegularPages }}{{ .WordCount }}+{{ end }}0;
-    const totalK = (totalChars / 1000).toFixed(1);
+    /* Hugo 自動加總所有文章字數 */
+    const totalK = "3.0";  /* 總字數，單位k，手動更新 */
 
     function update() {
-        const diff = Date.now() - start.getTime();
+        const diff  = Date.now() - start.getTime();
         const days  = Math.floor(diff / 86400000);
         const hours = Math.floor((diff % 86400000) / 3600000);
         const mins  = Math.floor((diff % 3600000) / 60000);
         const el = document.getElementById("site-runtime");
-        if (el) {
-            el.textContent =
-                `This blog has been existing for ${days} days, ${hours} hours, ${mins} mins, with a total of ${totalK}k words.`;
-        }
+        if (el) el.textContent =
+            `This blog has been existing for ${days} days, ${hours} hours, ${mins} mins, with a total of ${totalK}k words.`;
     }
     update();
     setInterval(update, 60000);

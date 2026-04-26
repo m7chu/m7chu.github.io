@@ -6,19 +6,20 @@ theme   = 'stack'
 languageCode = "zh-tw"
 
 [params]
-    mainSections       = ["posts"]   # 對應 content/posts/ 資料夾
+    mainSections = ["posts", "post"]
     featuredImageField = "image"
     rssFullContent     = true
-    defaultTheme       = "light"     # 預設淺色；改 "dark" 可預設深色
+    defaultTheme       = "light" # 預設淺色；改 "dark" 可預設深色
 
     [params.author]
         name     = "m7chu"
         headline = "昭昭如願。"
-
+        avatar   = "img/m7chu.jpg"   # 字串格式，不能改成巢狀
+    
     [params.sidebar]
     subtitle = "昭昭如願。"
-    avatar   = "img/m7chu.jpg"   # 字串格式，不能改成巢狀
-    
+    avatar   = "img/m7chu.jpg"
+
     [params.widgets]
         sidebar = ["search", "archives", "categories", "tag-cloud"]
 
