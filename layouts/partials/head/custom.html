@@ -1,36 +1,36 @@
 <style>
-/* =============================================
-   Light Mode（亮色模式）
-   ============================================= */
-[data-scheme="light"] {
-    --body-background: #EDECE9;   /* 亮色背景 */
-    --card-background: #CFCDC4;   /* 貼文框 */
-    --base-color: #4E5036;        /* 主文字色 */
+/* Light Mode */
+:root[data-scheme="light"] {
+    --body-background:   #E0DED2; /* 背景色 */
+    --card-background:   #BCB8A3; /* 文章卡片、側邊欄區塊 */
+    --base-color:        #636861; /* 主文字色 */
+    --card-text-color-main:      #AC6C6B; /* 主標題字色 */
+    --card-text-color-secondary: #8690A2; /* 次標題字色 */
+    --card-text-color-tertiary:  #D2C296; /* 更次要卡片字色 */
+    --accent-color:        #4B494F; /* 強調字色 */
+    --accent-color-darker: #64292F; /* 深一階強調字色 */
 }
 
-/* =============================================
-   Dark Mode（深色模式）
-   ============================================= */
-[data-scheme="dark"] {
-    --body-background: #4E5036;        /* 深色背景 */
-    --card-background: #7A746A;        /* 貼文框 */
-    --base-color: #CFCDC4;             /* 主文字色 */
+/* Dark Mode */
+:root[data-scheme="dark"] {
+    --body-background:   #636861; /* 背景色 */
+    --card-background:   #878378; /* 文章卡片、側邊欄區塊 */
+    --base-color:        #E0DED2; /* 主文字色 */
+    --card-text-color-main:      #E0DED2; /* 主標題字色 */
+    --card-text-color-secondary: #E0DED2; /* 次文字色 */
+    --card-text-color-tertiary:  #E0DED2; /* 更次要字色 */
+    --accent-color:        #E0DED2; /* 強調字色 */
+    --accent-color-darker: #E0DED2; /* 深一階強調字色 */
 }
 
-/* 直接蓋掉 body 背景確保生效 */
+/* 強制套用背景 */
 body {
     background-color: var(--body-background) !important;
 }
 
-/* 直接蓋掉貼文框背景 */
+/* 貼文框背景 */
 .article-list--tile .article-list--tile-item,
 .card {
     background-color: var(--card-background) !important;
 }
-
-/* 隱藏閱讀時間 */
-.article-time--reading { display: none; }
-
-/* 隱藏創用CC授權 */
-.article-license { display: none; }
 </style>

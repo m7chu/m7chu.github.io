@@ -24,7 +24,7 @@ languageCode = "zh-tw"
         sidebar = ["search", "archives", "categories", "tag-cloud"]
 
     [params.article]
-        readingTime = false          # 關閉閱讀時間顯示
+        readingTime = false    # 關閉閱讀時間顯示
         [params.article.license]
             enabled = true
             default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
@@ -54,13 +54,6 @@ languageCode = "zh-tw"
     name       = "Archive"
     url        = "/archives/"
     weight     = 3
-
-# 第四項：創作頁面（需建立 content/work/_index.md）
-[[menu.main]]
-    identifier = "work"
-    name       = "Work"
-    url        = "/work/"
-    weight     = 4
 
 # ── 社交連結 ──────────────────────────────────────────
 [[params.social]]
